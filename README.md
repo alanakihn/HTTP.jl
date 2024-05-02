@@ -21,7 +21,17 @@ julia> using Pkg; Pkg.add("HTTP")
 ```
 
 ## Quick Start Guide
+**Create a Simple Server 
+**
+```
+using HTTP
 
+function handle_request(req)
+    return HTTP.Response(200, "Hello from Julia server!")
+end
+
+HTTP.serve(handle_request, "localhost", 8080)
+```
 
 ## Project Status
 
