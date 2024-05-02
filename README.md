@@ -22,7 +22,8 @@ julia> using Pkg; Pkg.add("HTTP")
 
 ## Quick Start Guide
 
-Create a Simple Server 
+Start the server in one instance of Julia
+
 ```
 using HTTP
 
@@ -34,7 +35,15 @@ HTTP.serve(handle_request, "localhost", 8080)
 ```
 This server will listen on port 8080 and respond "Hello World" to any incoming requests!
 
+Start the client in another instance of Julia
+```
+using HTTP
 
+url = "http://localhost:8080"
+response = HTTP.get(url)
+println("Response Status: ", response.status)
+println("Response Body: ", String(response.body))
+```
 
 ## Project Status
 
