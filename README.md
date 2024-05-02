@@ -21,17 +21,20 @@ julia> using Pkg; Pkg.add("HTTP")
 ```
 
 ## Quick Start Guide
-**Create a Simple Server 
-**
+
+Create a Simple Server 
 ```
 using HTTP
 
 function handle_request(req)
-    return HTTP.Response(200, "Hello from Julia server!")
+    return HTTP.Response(200, "Hello World!")
 end
 
 HTTP.serve(handle_request, "localhost", 8080)
 ```
+This server will listen on port 8080 and respond "Hello World" to any incoming requests!
+
+
 
 ## Project Status
 
