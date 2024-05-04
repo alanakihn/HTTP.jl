@@ -12,15 +12,15 @@
 1. Install Julia from the offical Julia website: https://julialang.org/downloads/
 2. Add and import the HTTP Package 
    ```
-   import Pkg
-   Pkg.add("HTTP")
-   using HTTP
+   julia> import Pkg
+   julia> Pkg.add("HTTP")
+   julia> using HTTP
    ```
 3. Set up and a server and client:
     - Start the server in one instance of Julia
     
     ```
-    using HTTP
+    julia> using HTTP
     
     function handle_request(req)
         return HTTP.Response(200, "Hello World!")
@@ -32,7 +32,7 @@
     
     - Start the client in another instance of Julia
     ```
-    using HTTP
+    julia> using HTTP
     
     url = "http://localhost:8080"
     response = HTTP.get(url)
