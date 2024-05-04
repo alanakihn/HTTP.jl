@@ -7,19 +7,6 @@
 |:-------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------:|
 | [![][docs-stable-img]][docs-stable-url] [![][docs-dev-img]][docs-dev-url] | [![][github-actions-ci-img]][github-actions-ci-url] [![][codecov-img]][codecov-url] |
 
-
-## Installation
-
-The package can be installed with Julia's package manager,
-either by using the Pkg REPL mode (press `]` to enter):
-```
-pkg> add HTTP
-```
-or by using Pkg functions
-```julia
-julia> using Pkg; Pkg.add("HTTP")
-```
-
 ## Quick Start Guide
 
 1. Install Julia from the offical Julia website: https://julialang.org/downloads/
@@ -52,6 +39,18 @@ julia> using Pkg; Pkg.add("HTTP")
     println("Response Status: ", response.status)
     println("Response Body: ", String(response.body))
     ```
+
+## Installation
+
+The package can be installed with Julia's package manager,
+either by using the Pkg REPL mode (press `]` to enter):
+```
+pkg> add HTTP
+```
+or by using Pkg functions
+```julia
+julia> using Pkg; Pkg.add("HTTP")
+```
 
 ## Project Status
 
