@@ -11,7 +11,7 @@
 
 1. Install Julia from the offical Julia website: https://julialang.org/downloads/
 2. Add and import the HTTP Package 
-   ```
+   ```julia
    julia> import Pkg
    julia> Pkg.add("HTTP")
    julia> using HTTP
@@ -19,7 +19,7 @@
 3. Set up and a server and client:
     - Start the server in one instance of Julia
     
-    ```
+    ```julia
     julia> using HTTP
     
     function handle_request(req)
@@ -31,7 +31,7 @@
     This server will listen on port 8080 and respond "Hello World" to any incoming requests!
     
     - Start the client in another instance of Julia
-    ```
+    ```julia
     julia> using HTTP
     
     url = "http://localhost:8080"
