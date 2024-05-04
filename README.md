@@ -22,28 +22,36 @@ julia> using Pkg; Pkg.add("HTTP")
 
 ## Quick Start Guide
 
-Start the server in one instance of Julia
-
-```
-using HTTP
-
-function handle_request(req)
-    return HTTP.Response(200, "Hello World!")
-end
-
-HTTP.serve(handle_request, "localhost", 8080)
-```
-This server will listen on port 8080 and respond "Hello World" to any incoming requests!
-
-Start the client in another instance of Julia
-```
-using HTTP
-
-url = "http://localhost:8080"
-response = HTTP.get(url)
-println("Response Status: ", response.status)
-println("Response Body: ", String(response.body))
-```
+1. Install Julia from the offical Julia website: https://julialang.org/downloads/
+2. Add and import the HTTP Package 
+   ```
+   import Pkg
+   Pkg.add("HTTP")
+   using HTTP
+   ```
+3. Set up and a server and client:
+    Start the server in one instance of Julia
+    
+    ```
+    using HTTP
+    
+    function handle_request(req)
+        return HTTP.Response(200, "Hello World!")
+    end
+    
+    HTTP.serve(handle_request, "localhost", 8080)
+    ```
+    This server will listen on port 8080 and respond "Hello World" to any incoming requests!
+    
+    Start the client in another instance of Julia
+    ```
+    using HTTP
+    
+    url = "http://localhost:8080"
+    response = HTTP.get(url)
+    println("Response Status: ", response.status)
+    println("Response Body: ", String(response.body))
+    ```
 
 ## Project Status
 
@@ -80,6 +88,7 @@ HTTP.open(:GET, "https://tinyurl.com/bach-cello-suite-1-ogg") do http
     end
 end
 ```
+
 
 ## Server Examples
 
