@@ -20,7 +20,7 @@
     - Start the server in one instance of Julia
     
     ```julia
-    julia> using HTTP
+    using HTTP
     
     function handle_request(req)
         return HTTP.Response(200, "Hello World!")
@@ -32,7 +32,7 @@
     
     - Start the client in another instance of Julia
     ```julia
-    julia> using HTTP
+    using HTTP
     
     url = "http://localhost:8080"
     response = HTTP.get(url)
