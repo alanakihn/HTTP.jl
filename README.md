@@ -28,7 +28,7 @@
     
     HTTP.serve(handle_request, "localhost", 8080)
     ```
-   ~This server will listen on port 8080 and respond "Hello World" to any incoming requests!~
+   This server will listen on port 8080 and respond "Hello World" to any incoming requests!
    
     - Start the client in another instance of Julia
     ```julia
