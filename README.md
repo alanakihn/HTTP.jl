@@ -17,7 +17,7 @@
    using HTTP
    ```
 3. Set up and a server and client:
-    Start the server in one instance of Julia
+    - Start the server in one instance of Julia
     
     ```
     using HTTP
@@ -30,7 +30,7 @@
     ```
     This server will listen on port 8080 and respond "Hello World" to any incoming requests!
     
-    Start the client in another instance of Julia
+    - Start the client in another instance of Julia
     ```
     using HTTP
     
